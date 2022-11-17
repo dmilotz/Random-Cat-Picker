@@ -32,8 +32,6 @@ struct CatView: View {
                         .opacity(showCatView ? 1 : 0)
                         .offset(y: showCatView ? 0.0 : -bounds.height)
                     
-                
-                    
                     Spacer()
                     RoundedButton(title: "Show Liked Cats") {
                         self.presentSavedCats = true

@@ -19,6 +19,10 @@ struct CatImageView: View {
           if let image = viewModel.image {
               Image(uiImage: image)
                   .aspectRatio(contentMode: .fit)
+                  .foregroundColor(.primary)
+                  .minimumScaleFactor(0.2)
+                  .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                  .animation(.easeInOut)
 
           } else {
               ProgressView()
