@@ -17,8 +17,7 @@ ToDo
 #### Works on
 
 ### Prerequisites
-* Firebase
-* Realm
+ios 16+
 
 ## Version
 * Version 1.0
