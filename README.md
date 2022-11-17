@@ -8,6 +8,7 @@ Tap on the saved cats button to view a list of all the cats you've liked.
 
 ### Prerequisites
 ios 16+
+realm
 
 ## Version
 * Version 1.0
