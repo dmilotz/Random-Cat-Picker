@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11449BBB2925D7F600206006 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11449BBA2925D7F600206006 /* ApiClient.swift */; };
+		1184AECD29261E8A00F7337F /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AECC29261E8A00F7337F /* CatListView.swift */; };
+		1184AED129262DE000F7337F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AED029262DE000F7337F /* RealmManager.swift */; };
+		1184AED32926E1C800F7337F /* LikedDislikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AED22926E1C800F7337F /* LikedDislikeView.swift */; };
 		11A43384292572AA0033CD9E /* Random_CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A43383292572AA0033CD9E /* Random_CatApp.swift */; };
-		11A43386292572AA0033CD9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A43385292572AA0033CD9E /* ContentView.swift */; };
 		11A43388292572AC0033CD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A43387292572AC0033CD9E /* Assets.xcassets */; };
 		11A4338B292572AC0033CD9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A4338A292572AC0033CD9E /* Preview Assets.xcassets */; };
 		11A43395292572AC0033CD9E /* Random_CatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A43394292572AC0033CD9E /* Random_CatTests.swift */; };
 		11A4339F292572AC0033CD9E /* Random_CatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4339E292572AC0033CD9E /* Random_CatUITests.swift */; };
 		11A433A1292572AC0033CD9E /* Random_CatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433A0292572AC0033CD9E /* Random_CatUITestsLaunchTests.swift */; };
+		11A433AF292575A30033CD9E /* RandomCatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433AE292575A30033CD9E /* RandomCatService.swift */; };
+		11A433B22925764C0033CD9E /* RandomCatDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433B12925764C0033CD9E /* RandomCatDataPublisher.swift */; };
+		11A433B5292576FF0033CD9E /* RandomCatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433B4292576FF0033CD9E /* RandomCatViewModel.swift */; };
+		11A433B82925771E0033CD9E /* RandomCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433B72925771E0033CD9E /* RandomCat.swift */; };
+		11A433C0292593E40033CD9E /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433BF292593E40033CD9E /* CatView.swift */; };
+		11A433C2292594960033CD9E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433C1292594960033CD9E /* RoundedButton.swift */; };
+		11A433CC292599630033CD9E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 11A433CB292599630033CD9E /* Realm */; };
+		11A433CE292599630033CD9E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11A433CD292599630033CD9E /* RealmSwift */; };
+		11A433D029259C0E0033CD9E /* CatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433CF29259C0E0033CD9E /* CatImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11449BBA2925D7F600206006 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		1184AECC29261E8A00F7337F /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
+		1184AED029262DE000F7337F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		1184AED22926E1C800F7337F /* LikedDislikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedDislikeView.swift; sourceTree = "<group>"; };
 		11A43380292572AA0033CD9E /* Random Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A43383292572AA0033CD9E /* Random_CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_CatApp.swift; sourceTree = "<group>"; };
-		11A43385292572AA0033CD9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11A43387292572AC0033CD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A4338A292572AC0033CD9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11A43390292572AC0033CD9E /* Random CatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Random CatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +59,13 @@
 		11A4339A292572AC0033CD9E /* Random CatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Random CatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A4339E292572AC0033CD9E /* Random_CatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_CatUITests.swift; sourceTree = "<group>"; };
 		11A433A0292572AC0033CD9E /* Random_CatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_CatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		11A433AE292575A30033CD9E /* RandomCatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatService.swift; sourceTree = "<group>"; };
+		11A433B12925764C0033CD9E /* RandomCatDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatDataPublisher.swift; sourceTree = "<group>"; };
+		11A433B4292576FF0033CD9E /* RandomCatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatViewModel.swift; sourceTree = "<group>"; };
+		11A433B72925771E0033CD9E /* RandomCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCat.swift; sourceTree = "<group>"; };
+		11A433BF292593E40033CD9E /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
+		11A433C1292594960033CD9E /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		11A433CF29259C0E0033CD9E /* CatImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A433CE292599630033CD9E /* RealmSwift in Frameworks */,
+				11A433CC292599630033CD9E /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +118,12 @@
 		11A43382292572AA0033CD9E /* Random Cat */ = {
 			isa = PBXGroup;
 			children = (
+				11A433BE292593CE0033CD9E /* Views */,
+				11A433B6292577120033CD9E /* Model */,
+				11A433B3292576EE0033CD9E /* ViewModel */,
+				11A433B02925760E0033CD9E /* Protocols */,
+				11A433AD292575960033CD9E /* Services */,
 				11A43383292572AA0033CD9E /* Random_CatApp.swift */,
-				11A43385292572AA0033CD9E /* ContentView.swift */,
 				11A43387292572AC0033CD9E /* Assets.xcassets */,
 				11A43389292572AC0033CD9E /* Preview Content */,
 			);
@@ -127,6 +155,52 @@
 			path = "Random CatUITests";
 			sourceTree = "<group>";
 		};
+		11A433AD292575960033CD9E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11A433AE292575A30033CD9E /* RandomCatService.swift */,
+				11449BBA2925D7F600206006 /* ApiClient.swift */,
+				1184AED029262DE000F7337F /* RealmManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		11A433B02925760E0033CD9E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				11A433B12925764C0033CD9E /* RandomCatDataPublisher.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		11A433B3292576EE0033CD9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11A433B4292576FF0033CD9E /* RandomCatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11A433B6292577120033CD9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11A433B72925771E0033CD9E /* RandomCat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11A433BE292593CE0033CD9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11A433BF292593E40033CD9E /* CatView.swift */,
+				11A433C1292594960033CD9E /* RoundedButton.swift */,
+				11A433CF29259C0E0033CD9E /* CatImageView.swift */,
+				1184AECC29261E8A00F7337F /* CatListView.swift */,
+				1184AED22926E1C800F7337F /* LikedDislikeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +217,10 @@
 			dependencies = (
 			);
 			name = "Random Cat";
+			packageProductDependencies = (
+				11A433CB292599630033CD9E /* Realm */,
+				11A433CD292599630033CD9E /* RealmSwift */,
+			);
 			productName = "Random Cat";
 			productReference = 11A43380292572AA0033CD9E /* Random Cat.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +293,9 @@
 				Base,
 			);
 			mainGroup = 11A43377292572AA0033CD9E;
+			packageReferences = (
+				11A433CA292599620033CD9E /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 11A43381292572AA0033CD9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +338,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11A43386292572AA0033CD9E /* ContentView.swift in Sources */,
+				11A433B22925764C0033CD9E /* RandomCatDataPublisher.swift in Sources */,
+				11A433B82925771E0033CD9E /* RandomCat.swift in Sources */,
+				1184AED129262DE000F7337F /* RealmManager.swift in Sources */,
+				11A433D029259C0E0033CD9E /* CatImageView.swift in Sources */,
+				11A433C0292593E40033CD9E /* CatView.swift in Sources */,
+				11A433C2292594960033CD9E /* RoundedButton.swift in Sources */,
+				1184AED32926E1C800F7337F /* LikedDislikeView.swift in Sources */,
+				1184AECD29261E8A00F7337F /* CatListView.swift in Sources */,
+				11A433B5292576FF0033CD9E /* RandomCatViewModel.swift in Sources */,
+				11A433AF292575A30033CD9E /* RandomCatService.swift in Sources */,
 				11A43384292572AA0033CD9E /* Random_CatApp.swift in Sources */,
+				11449BBB2925D7F600206006 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +516,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +546,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +676,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11A433CA292599620033CD9E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.32.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11A433CB292599630033CD9E /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A433CA292599620033CD9E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		11A433CD292599630033CD9E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A433CA292599620033CD9E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11A43378292572AA0033CD9E /* Project object */;
 }

@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+
 @main
 struct Random_CatApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CatView()
         }
     }
 }
