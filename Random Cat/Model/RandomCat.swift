@@ -8,10 +8,6 @@
 import Foundation
 import RealmSwift
 
-//public enum ImageType: String {
-//    case gif, jpeg, png, unknown
-//}
-
 class RandomCat: Object, Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"

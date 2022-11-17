@@ -23,7 +23,7 @@ class RealmManager: ObservableObject {
         do {
             let config = Realm.Configuration(schemaVersion: 1, migrationBlock: { migration, oldSchemaVersion in
                 if oldSchemaVersion > 1 {
-                    // Do something, usually updating the schema's variables here
+                    //TODO: handle different schemas
                 }
             })
 
@@ -64,11 +64,9 @@ class RealmManager: ObservableObject {
     func writeImageData(from cat: RandomCat, image: UIImage){
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 
-        // Create URL
         let url = documents.appendingPathComponent(cat.id)
         print(url)
 
-        // Convert to Data
         if let data = image.pngData() {
             do {
                 try data.write(to: url)

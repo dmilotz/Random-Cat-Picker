@@ -85,6 +85,5 @@ public final class CatViewModel: ObservableObject {
     
     public func reset() {
         image = nil
-        //        backgroundColor = Color("Gray")
     }
 }
