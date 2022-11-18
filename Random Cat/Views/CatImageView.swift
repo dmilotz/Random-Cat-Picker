@@ -37,11 +37,6 @@ struct CatImageView: View {
   }
   
   private var bounds: CGRect { UIScreen.main.bounds }
-  
-  private var repeatingAnimation: Animation {
-    Animation.linear(duration: 1)
-      .repeatForever()
-  }
 }
 
 struct CatImageView_Previews: PreviewProvider {

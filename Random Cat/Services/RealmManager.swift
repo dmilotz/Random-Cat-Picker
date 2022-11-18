@@ -11,8 +11,14 @@ import UIKit
 
 class RealmManager: ObservableObject {
     private var localRealm: Realm?
+   
+    enum Error {
+        case writeError, loadImageError, retrieveDataError
+    }
     
     @Published var cats: [RandomCat] = []
+    @Published var saveError: Bool = false
+    @Published var error: Error?
     
     init() {
         openRealm()
@@ -30,13 +36,13 @@ class RealmManager: ObservableObject {
             Realm.Configuration.defaultConfiguration = config
             localRealm = try Realm()
         } catch {
-            print("Error opening Realm", error)
+            self.error = .writeError
         }
     }
     
     func addCat(newCat: RandomCat, imageToBeAdded: UIImage?) {
         guard let image = imageToBeAdded else {
-            print("Error, no image found!")
+            error = .writeError
             return
         }
         
@@ -47,7 +53,7 @@ class RealmManager: ObservableObject {
                     writeImageData(from: newCat, image: image)
                 }
             } catch {
-                print("Error adding cat to Realm", error)
+                self.error = .writeError
             }
         }
     }
@@ -55,7 +61,7 @@ class RealmManager: ObservableObject {
     func getCats() {
         if let localRealm = localRealm {
             let allCats = localRealm.objects(RandomCat.self)
-            allCats.forEach { cat in
+            allCats.reversed().forEach { cat in
                     cats.append(cat)
             }
         }
@@ -65,13 +71,12 @@ class RealmManager: ObservableObject {
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 
         let url = documents.appendingPathComponent(cat.id)
-        print(url)
 
         if let data = image.pngData() {
             do {
                 try data.write(to: url)
             } catch {
-                print("Unable to Write Image Data to Disk")
+                self.error = .writeError
             }
         }
     }
@@ -84,7 +89,7 @@ class RealmManager: ObservableObject {
                 let imageData = try Data(contentsOf: url)
                 return UIImage(data: imageData)
             } catch {
-                print("Error loading image : \(error)")
+                self.error = .loadImageError
             }
             return nil
     }
