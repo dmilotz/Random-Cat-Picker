@@ -11,6 +11,7 @@
 		1184AECD29261E8A00F7337F /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AECC29261E8A00F7337F /* CatListView.swift */; };
 		1184AED129262DE000F7337F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AED029262DE000F7337F /* RealmManager.swift */; };
 		1184AED32926E1C800F7337F /* LikedDislikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AED22926E1C800F7337F /* LikedDislikeView.swift */; };
+		1184AED52927FAA900F7337F /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AED42927FAA900F7337F /* NetworkMonitor.swift */; };
 		11A43384292572AA0033CD9E /* Random_CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A43383292572AA0033CD9E /* Random_CatApp.swift */; };
 		11A43388292572AC0033CD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A43387292572AC0033CD9E /* Assets.xcassets */; };
 		11A4338B292572AC0033CD9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A4338A292572AC0033CD9E /* Preview Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		1184AECC29261E8A00F7337F /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		1184AED029262DE000F7337F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		1184AED22926E1C800F7337F /* LikedDislikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedDislikeView.swift; sourceTree = "<group>"; };
+		1184AED42927FAA900F7337F /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		11A43380292572AA0033CD9E /* Random Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A43383292572AA0033CD9E /* Random_CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_CatApp.swift; sourceTree = "<group>"; };
 		11A43387292572AC0033CD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				11A433AE292575A30033CD9E /* RandomCatService.swift */,
 				11449BBA2925D7F600206006 /* ApiClient.swift */,
 				1184AED029262DE000F7337F /* RealmManager.swift */,
+				1184AED42927FAA900F7337F /* NetworkMonitor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				1184AED32926E1C800F7337F /* LikedDislikeView.swift in Sources */,
 				1184AECD29261E8A00F7337F /* CatListView.swift in Sources */,
 				11A433B5292576FF0033CD9E /* RandomCatViewModel.swift in Sources */,
+				1184AED52927FAA900F7337F /* NetworkMonitor.swift in Sources */,
 				11A433AF292575A30033CD9E /* RandomCatService.swift in Sources */,
 				11A43384292572AA0033CD9E /* Random_CatApp.swift in Sources */,
 				11449BBB2925D7F600206006 /* ApiClient.swift in Sources */,

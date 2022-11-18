@@ -17,7 +17,8 @@ struct CatView: View {
     @State private var hudOpacity = 0.5
     @State private var presentSavedCats = false
     @State var kittySaved: Bool = false
-
+    
+    
     private var bounds: CGRect { UIScreen.main.bounds }
     private var translation: Double { Double(cardTranslation.width / bounds.width) }
     
@@ -25,8 +26,9 @@ struct CatView: View {
     var body: some View {
         ZStack {
             NavigationView {
+                
                 VStack {
-                  Spacer()
+                    Spacer()
                     catImageView
                         .opacity(showCatView ? 1 : 0)
                         .offset(y: showCatView ? 0.0 : -bounds.height)
@@ -41,7 +43,14 @@ struct CatView: View {
                     }
                 }
                 .navigationBarTitle("Random Cat Picker")
+                .toolbar{
+                    Button("Refresh") {
+                        self.reset()
+                    }
+                    .opacity(viewModel.networkMonitor.isConnected ? 0 : 1)
+                }
             }
+            .onAppear(perform: {self.reset()})
             
             HStack {
                 ProgressView()
@@ -51,11 +60,12 @@ struct CatView: View {
             .frame(alignment: .center)
             .opacity(showCatView ? 0 : 1)
             .alert("Kitty picture was saved!", isPresented: $kittySaved) {
-                        Button("OK", role: .cancel) { }
-                    }
+                Button("OK", role: .cancel) { }
+            }
             .alert("Network Error! Check your connection and try again.", isPresented: $viewModel.networkError) {
                 Button("OK", role: .cancel) { }
             }
+            
         }
         .onAppear(perform: {
             self.reset()

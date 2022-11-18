@@ -29,7 +29,15 @@ public final class CatViewModel: ObservableObject {
     @Published public var decisionState = DecisionState.undecided
     @Published var image: UIImage?
     @Published var networkError: Bool = false
-    
+    @Published var networkMonitor = Monitor() {
+        didSet {
+            if !networkMonitor.isConnected {
+                networkError = true
+            } else {
+                networkError = false
+            }
+        }
+    }
     // Subscriber implementation
     func fetchCat() {
         subscription = RandomCatApi.requestRandomCat()
