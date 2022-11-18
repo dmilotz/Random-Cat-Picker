@@ -9,7 +9,6 @@ import SwiftUI
 import RealmSwift
 
 struct CatView: View {
-    @State var kittySaved: Bool = false
     @StateObject var realmManager = RealmManager()
     @ObservedObject private var viewModel = CatViewModel()
     @State private var showCatView = false
@@ -17,10 +16,10 @@ struct CatView: View {
     @State private var cardTranslation: CGSize = .zero
     @State private var hudOpacity = 0.5
     @State private var presentSavedCats = false
-    
+    @State var kittySaved: Bool = false
+
     private var bounds: CGRect { UIScreen.main.bounds }
     private var translation: Double { Double(cardTranslation.width / bounds.width) }
-    private var circleDiameter: CGFloat { bounds.width * 0.9 }
     
     
     var body: some View {
@@ -50,7 +49,7 @@ struct CatView: View {
                         .repeatForever(autoreverses: false), value: showFetchingCat)
             }
             .frame(alignment: .center)
-            .opacity(showFetchingCat ? 1 : 0)
+            .opacity(showCatView ? 0 : 1)
             .alert("Kitty picture was saved!", isPresented: $kittySaved) {
                         Button("OK", role: .cancel) { }
                     }
@@ -65,7 +64,6 @@ struct CatView: View {
     
     private var catImageView: some View {
         CatImageView(viewModel: viewModel)
-            .background(viewModel.backgroundColor)
             .cornerRadius(20)
             .shadow(radius: 10)
             .rotationEffect(rotationAngle)
@@ -75,7 +73,6 @@ struct CatView: View {
                 DragGesture()
                     .onChanged { change in
                         self.cardTranslation = change.translation
-                        self.updateBackgroundColor()
                     }
                     .onEnded { change in
                         self.updateDecisionStateForChange(change)
@@ -96,9 +93,6 @@ struct CatView: View {
         )
     }
     
-    private func updateBackgroundColor() {
-        viewModel.updateBackgroundColorForTranslation(translation)
-    }
     
     private func handle(_ change: DragGesture.Value) {
         let decisionState = viewModel.decisionState
@@ -107,11 +101,11 @@ struct CatView: View {
         case .undecided:
             kittySaved = false
             cardTranslation = .zero
-            self.viewModel.reset()
         default:
             if decisionState == .liked {
                 realmManager.addCat(newCat: viewModel.randomCat, imageToBeAdded: viewModel.image)
                 kittySaved = true
+                
             }
             
             let translation = change.translation
@@ -121,6 +115,7 @@ struct CatView: View {
                 height: translation.height
             )
             showCatView = false
+            self.viewModel.reset()
             reset()
         }
     }

@@ -26,7 +26,6 @@ public final class CatViewModel: ObservableObject {
         }
     }
     
-    @Published public var backgroundColor = Color(white: 0.4745)
     @Published public var decisionState = DecisionState.undecided
     @Published var image: UIImage?
     @Published var networkError: Bool = false
@@ -57,26 +56,14 @@ public final class CatViewModel: ObservableObject {
                            .assign(to: \.image, on: self)    // 5
     }
     
-
-    public func updateBackgroundColorForTranslation(_ translation: Double) {
-        switch translation {
-        case ...(-0.5):
-            backgroundColor = Color("Red")
-        case 0.5...:
-            backgroundColor = Color("Green")
-        default:
-            backgroundColor = Color("Gray")
-        }
-    }
-    
     public func updateDecisionStateForTranslation(
         _ translation: Double,
         andPredictedEndLocationX x: CGFloat,
         inBounds bounds: CGRect) {
             switch (translation, x) {
-            case (...(-0.2), ..<0):
+            case (...(-0.6), ..<0):
                 decisionState = .disliked
-            case (0.2..., bounds.width...):
+            case (0.6..., bounds.width...):
                 decisionState = .liked
             default:
                 decisionState = .undecided
