@@ -5,6 +5,9 @@
 Swipe right on the cats you like and swipe left on the poor kitties you want to forget. 
 
 Tap on the saved cats button to view a list of all the cats you've liked.
+### Known Issues 
+
+Swiping up quickly can cause the UI to not update. 
 
 ### Prerequisites
 ios 16+
