@@ -22,7 +22,7 @@
 		11A433B22925764C0033CD9E /* RandomCatDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433B12925764C0033CD9E /* RandomCatDataPublisher.swift */; };
 		11A433B5292576FF0033CD9E /* RandomCatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433B4292576FF0033CD9E /* RandomCatViewModel.swift */; };
 		11A433B82925771E0033CD9E /* RandomCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433B72925771E0033CD9E /* RandomCat.swift */; };
-		11A433C0292593E40033CD9E /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433BF292593E40033CD9E /* CatView.swift */; };
+		11A433C0292593E40033CD9E /* MainCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433BF292593E40033CD9E /* MainCatView.swift */; };
 		11A433C2292594960033CD9E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A433C1292594960033CD9E /* RoundedButton.swift */; };
 		11A433CC292599630033CD9E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 11A433CB292599630033CD9E /* Realm */; };
 		11A433CE292599630033CD9E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11A433CD292599630033CD9E /* RealmSwift */; };
@@ -65,7 +65,7 @@
 		11A433B12925764C0033CD9E /* RandomCatDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatDataPublisher.swift; sourceTree = "<group>"; };
 		11A433B4292576FF0033CD9E /* RandomCatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatViewModel.swift; sourceTree = "<group>"; };
 		11A433B72925771E0033CD9E /* RandomCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCat.swift; sourceTree = "<group>"; };
-		11A433BF292593E40033CD9E /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
+		11A433BF292593E40033CD9E /* MainCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatView.swift; sourceTree = "<group>"; };
 		11A433C1292594960033CD9E /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		11A433CF29259C0E0033CD9E /* CatImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,7 +195,7 @@
 		11A433BE292593CE0033CD9E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				11A433BF292593E40033CD9E /* CatView.swift */,
+				11A433BF292593E40033CD9E /* MainCatView.swift */,
 				11A433C1292594960033CD9E /* RoundedButton.swift */,
 				11A433CF29259C0E0033CD9E /* CatImageView.swift */,
 				1184AECC29261E8A00F7337F /* CatListView.swift */,
@@ -345,7 +345,7 @@
 				11A433B82925771E0033CD9E /* RandomCat.swift in Sources */,
 				1184AED129262DE000F7337F /* RealmManager.swift in Sources */,
 				11A433D029259C0E0033CD9E /* CatImageView.swift in Sources */,
-				11A433C0292593E40033CD9E /* CatView.swift in Sources */,
+				11A433C0292593E40033CD9E /* MainCatView.swift in Sources */,
 				11A433C2292594960033CD9E /* RoundedButton.swift in Sources */,
 				1184AED32926E1C800F7337F /* LikedDislikeView.swift in Sources */,
 				1184AECD29261E8A00F7337F /* CatListView.swift in Sources */,

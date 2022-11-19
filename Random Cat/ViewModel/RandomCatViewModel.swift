@@ -69,9 +69,9 @@ public final class CatViewModel: ObservableObject {
         andPredictedEndLocationX x: CGFloat,
         inBounds bounds: CGRect) {
             switch (translation, x) {
-            case (...(-0.6), ..<0):
+            case (...(-0.4), ..<0):
                 decisionState = .disliked
-            case (0.6..., bounds.width...):
+            case (0.4..., bounds.width...):
                 decisionState = .liked
             default:
                 decisionState = .undecided

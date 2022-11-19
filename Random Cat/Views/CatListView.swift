@@ -39,7 +39,6 @@ struct CatListView: View {
                                 .modifier(CenterModifier())
                         }
                         
-
                     }
                     
                 }

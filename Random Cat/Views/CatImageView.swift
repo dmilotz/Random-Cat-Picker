@@ -22,7 +22,6 @@ struct CatImageView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.primary)
-                        .minimumScaleFactor(0.2)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                         .animation(.easeInOut)
                     
@@ -30,11 +29,10 @@ struct CatImageView: View {
                     ProgressView()
                 }
             }
-            
             .padding(20)
             .cornerRadius(20)
         }
-        .frame(width: min(300, bounds.width * 0.7), height: min(400, bounds.height * 0.6))
+        .frame(width: min(300, bounds.width * 0.9), height: min(400, bounds.height * 0.6))
         
     }
     
