@@ -35,10 +35,8 @@ struct CatView: View {
                     
                     Spacer()
                     NavigationLink(destination: CatListView()) {
-                        
                         Text("Show Liked Cats")
                         .padding(20)
-                        
                     }
                     
                 }
