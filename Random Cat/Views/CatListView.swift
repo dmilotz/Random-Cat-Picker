@@ -22,10 +22,9 @@ struct CatListView: View {
                             Image(uiImage: image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: min(300, bounds.width * 0.7), height: min(400, bounds.height * 0.6))
+                                .frame(width: bounds.width * 0.7, height:  bounds.height * 0.6)
                                 .modifier(CenterModifier())
                                 .cornerRadius(20)
-
 
                         } else {
                             Image(uiImage: UIImage(named: "UnknownImageType")!)
@@ -34,8 +33,8 @@ struct CatListView: View {
                     }
                 }
                 .listStyle(GroupedListStyle())
-                    .navigationBarTitle("Saved Cats", displayMode: .large)
-                    .navigationBarBackButtonHidden(true)
+                    .navigationBarTitle("Liked Cats", displayMode: .large)
+                    .navigationBarBackButtonHidden(false)
     
             }
         }

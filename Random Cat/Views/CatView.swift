@@ -34,13 +34,13 @@ struct CatView: View {
                         .offset(y: showCatView ? 0.0 : -bounds.height)
                     
                     Spacer()
-                    RoundedButton(title: "Show Liked Cats") {
-                        self.presentSavedCats = true
+                    NavigationLink(destination: CatListView()) {
+                        
+                        Text("Show Liked Cats")
+                        .padding(20)
+                        
                     }
-                    .padding(20)
-                    .sheet(isPresented: $presentSavedCats) {
-                        CatListView()
-                    }
+                    
                 }
                 .navigationBarTitle("Random Cat Picker")
                 .toolbar{

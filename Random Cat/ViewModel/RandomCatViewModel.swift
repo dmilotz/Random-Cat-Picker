@@ -16,7 +16,6 @@ public final class CatViewModel: ObservableObject {
         case disliked, undecided, liked
     }
     
-    private static let decoder = JSONDecoder()
     var subscription: AnyCancellable?
     
     @Published public var fetching = false
@@ -38,7 +37,7 @@ public final class CatViewModel: ObservableObject {
             }
         }
     }
-    // Subscriber implementation
+    
     func fetchCat() {
         subscription = RandomCatApi.requestRandomCat()
             .mapError({ (error) -> Error in
@@ -56,12 +55,13 @@ public final class CatViewModel: ObservableObject {
             networkError = true
             return
         }
+        
         subscription = URLSession.shared
-                           .dataTaskPublisher(for: url)
-                           .map { UIImage(data: $0.data) }   // 2
-                           .replaceError(with: nil)          // 3
-                           .receive(on: DispatchQueue.main)  // 4
-                           .assign(to: \.image, on: self)    // 5
+            .dataTaskPublisher(for: url)
+            .map { UIImage(data: $0.data) }
+            .replaceError(with: nil)
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.image, on: self)
     }
     
     public func updateDecisionStateForTranslation(
